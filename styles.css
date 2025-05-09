@@ -3,7 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+@font-face {
+    font-family: 'NorseBold';
+    src: url('Norse-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }  
+  
+  
 :root {
 
 }
@@ -11,6 +18,8 @@
 body {
     height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: row;
 }
 
 .sideBar {
@@ -43,8 +52,111 @@ body {
     object-fit: contain;
 }
 
+.odin{
+    font-family: 'NorseBold',sans-serif;
+    color: white;
+    font-size: 10vh;
+}
 
 .credit{
     font-size: 1rem;
     color: white;
+}
+
+.mainBar {
+    width: 65%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vh 0;
+}
+
+.title, .titleTwo{
+    font-family:'Helvetica Neue', sans-serif;
+    font-size: 3vh;
+    font-weight: bold;
+    color: black;
+    padding: 3vh 3vw;
+}
+.form .title {
+    padding: 0;
+}
+.form {
+    background-color: white;
+    height: 40%;
+    width: 100%;
+    padding: 1rem 3vw; 
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.form form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem; 
+    width: 80%;
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563EB;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+input[type="password"]:invalid {
+    border-color: red;
+}
+label {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+button {
+    padding: 15px 50px;
+    background-color: #596D48;
+    box-shadow: rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    cursor: pointer;
+    box-shadow: 0 6px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.lastLine {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    margin-left: 3vw;
+}
+
+.lastLine span {
+    color: #596D48;
+    font-weight: bold;
+    cursor: pointer;
 }
